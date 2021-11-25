@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:09:33 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/25 20:29:45 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/25 20:59:29 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ char	*get_next_line(int fd)
 	}
 	oldval = before_newline(buffer);
 	buffer = after_newline(new, BUFFER_SIZE);
+	return (oldval);
 }
