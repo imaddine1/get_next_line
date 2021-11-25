@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:09:33 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/25 20:59:29 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/25 21:36:24 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*before_newline(char *s)
 		p[j] = s[j];
 		j++;
 	}
-	p[j] = '\n';
+	p[j++] = '\n';
 	p[j] = '\0';
 	return (p);
 }
@@ -68,8 +68,12 @@ char	*get_next_line(int fd)
 	int			i;
 	char		*oldval;
 
-	i = 1;
 	new = malloc (sizeof(char) * BUFFER_SIZE);
+	if (!buffer)
+	{
+		i = read (fd, new, BUFFER_SIZE);
+		buffer = ft_strdup(new);
+	}
 	while (ft_strchr(buffer, '\n') && i)
 	{
 		i = read(fd, new, BUFFER_SIZE);

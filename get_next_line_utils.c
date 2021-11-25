@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:01:29 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/25 19:06:45 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/25 21:30:21 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (0);
 	i = 0;
 	j = 0;
-	p = malloc (sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 2));
+	p = malloc (sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (p == NULL)
 		return (0);
 	while (s1[i])
@@ -55,9 +55,8 @@ char	*ft_strjoin(char *s1, char *s2)
 		p[i] = s1[i];
 		i++;
 	}
-	while (s2[j] && s2[j] != '\n')
+	while (s2[j])
 		p[i++] = s2[j++];
-	p[i++] = '\n';
 	p[i] = '\0';
 	return (p);
 }
@@ -68,16 +67,17 @@ int	ft_strchr(char *s, int c)
 	int				i;
 	char			b;
 
+	if (!s)
+		return (1);
 	i = 0;
-	str = (char *)s;
 	b = (char)c;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == b)
+		if (s[i] == b)
 			return (0);
 		i++;
 	}
-	if (str[i] == b)
+	if (s[i] == b)
 		return (0);
 	return (1);
 }
@@ -108,7 +108,7 @@ size_t	ft_strlen(char	*str)
 	size_t	i;
 
 	i = 0;
-	while (str[i] && str[i] != '\n')
+	while (str[i])
 		i++;
 	return (i);
 }

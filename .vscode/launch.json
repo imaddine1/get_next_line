@@ -2,6 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "clang++ - Build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/Users/iharile/Desktop/Currsus42/get_next_line/a.out",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "clang++ build active file"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -9,7 +22,7 @@
       "stopAtEntry": true,
       "cwd": "/Users/iharile/Desktop/Currsus42/get_next_line",
       "environment": [],
-      "program": "/Users/iharile/Desktop/Currsus42/get_next_line/build/Debug/outDebug",
+      "program": "/Users/iharile/Desktop/Currsus42/get_next_line/a.out",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
       "externalConsole": true
