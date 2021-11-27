@@ -22,7 +22,7 @@
       "stopAtEntry": true,
       "cwd": "/Users/iharile/Desktop/Currsus42/get_next_line",
       "environment": [],
-      "program": "/Users/iharile/Desktop/Currsus42/get_next_line/a.out",
+      "program": "/Users/iharile/Desktop/Currsus42/get_next_line/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
       "externalConsole": true
