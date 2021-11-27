@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 13:36:02 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/27 13:56:03 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/27 18:51:01 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,12 @@
 int	main(void)
 {
 	int	fd;
+	int	fd2;
 
-	fd = open("get.txt", 0);
+	fd = open("AAAAJDJDJDJDJD", 0);
 	printf ("%s", get_next_line(fd));
 	printf ("%s", get_next_line(fd));
 	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	printf ("%s", get_next_line(fd));
-	return (0);
+	printf ("%d\n", fd);
+		return (0);
 }
