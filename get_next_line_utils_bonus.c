@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/27 13:21:28 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/27 14:31:45 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/26 16:09:40 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/27 15:09:29 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	findline(char *s)
 {

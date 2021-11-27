@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/27 12:44:15 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/27 14:59:39 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/26 16:08:35 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/27 15:17:22 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*bf_line(char *s)
 {
@@ -92,7 +92,7 @@ char	*norminette_25(int fd, char *buff, char *new, int size)
 
 char	*get_next_line(int fd)
 {
-	static char	*buff;
+	static char	*buff[MAX_FD];
 	int			i;
 	char		*new;
 	char		*old;
@@ -101,10 +101,10 @@ char	*get_next_line(int fd)
 		return (0);
 	i = 1;
 	new = malloc (sizeof(char) * (BUFFER_SIZE + 1));
-	buff = norminette_25(fd, buff, new, BUFFER_SIZE);
-	if (!buff)
+	buff[fd] = norminette_25(fd, buff[fd], new, BUFFER_SIZE);
+	if (!buff[fd])
 		return (0);
-	old = bf_line(buff);
-	buff = af_line(buff, 0);
+	old = bf_line(buff[fd]);
+	buff[fd] = af_line(buff[fd], 0);
 	return (old);
 }
